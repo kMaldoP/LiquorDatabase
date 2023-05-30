@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+    postgres:
+        image: postgres:14.1
+        environment:
+            - POSTGRES_USER=user
+            - POSTGRES_PASSWORD=1234
+            - POSTGRES_DB=Pourcost
+        ports: 
+            - 5432:5432
+        logging:
+            options:
+                max-size: 10m
+                max-file: "3"
+    pgadmin:
+        image: dpage/pgadmin4
+        environment: 
+            - PGADMIN_DEFAULT_EMAIL=krysm2015@gmail.com
+            - PGADMIN_DEFAULT_PASSWORD=1234
+        ports: 
+            - "5050:80"

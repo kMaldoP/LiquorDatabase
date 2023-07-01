@@ -1,5 +1,5 @@
 CREATE TABLE TotalInventory(
-    ProductName TEXT NOT NULL,
+    ProductName TEXT PRIMARY KEY NOT NULL,
     Category TEXT NOT NULL,
     BottleSize TEXT,
     BottleCost MONEY NOT NULL ,
